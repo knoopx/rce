@@ -83,3 +83,9 @@ $ open output.dot
 
 [readmem](https://github.com/gdbinit/readmem)
 :  Read and dump process memory
+
+[frida](http://www.frida.re/)
+:  Runtime injection and scripting
+
+[cycript](http://www.cycript.org/)
+:  Runtime injection and scripting
