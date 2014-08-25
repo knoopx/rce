@@ -70,9 +70,16 @@ similarity: 0.97
 distance: 743  
 ```
 
+
 ### Graph diff
 
 ```
 $ radiff2 -g main /bin/false /bin/true > output.dot
 $ open output.dot
 ```
+
+
+# Tools
+
+[readmem](https://github.com/gdbinit/readmem)
+:  Read and dump process memory
