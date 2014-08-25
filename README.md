@@ -2,13 +2,13 @@
 
 ## obj-c
 
-|        | i386 (before prolog) | i386 (after prolog)  | x86_64        |
-|--------|----------------------|----------------------|---------------|
-| self   | `po *(id*)($esp)`    | `po *(id*)($ebp+8)`  | `po $rdi`     |
-| method | `p *(SEL*)($esp+4)`  | `p *(SEL*)($ebp+12)` | `p (SEL)$rsi` |
-| foo    | `po *(id*)($esp+8)`  | `po *(id*)($ebp+16)` | `po $rdx`     |
-| bar    | `po *(id*)($esp+12)` | `po *(id*)($ebp+20)` | `po $rcx`     |
-| baz    | `po *(id*)($esp+16)` | `po *(id*)($ebp+24)` | `po $r8`      |
+|         | i386 (before prolog) | i386 (after prolog)  | x86_64        |
+|---------|----------------------|----------------------|---------------|
+| self    | `po *(id*)($esp)`    | `po *(id*)($ebp+8)`  | `po $rdi`     |
+| method  | `p *(SEL*)($esp+4)`  | `p *(SEL*)($ebp+12)` | `p (SEL)$rsi` |
+| arg1    | `po *(id*)($esp+8)`  | `po *(id*)($ebp+16)` | `po $rdx`     |
+| arg2    | `po *(id*)($esp+12)` | `po *(id*)($ebp+20)` | `po $rcx`     |
+| arg2    | `po *(id*)($esp+16)` | `po *(id*)($ebp+24)` | `po $r8`      |
 
 ## lldb basics
 
