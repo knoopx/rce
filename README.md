@@ -1,5 +1,42 @@
 # Reverse Code Engineering Notes
 
+## lldb basics
+
+```
+$ lldb
+
+# attach to the application; pauses it
+lldb> attach MyApp
+
+# sets the breakpoint by name
+lldb> break set --name '-[MyObject doSomethingSpecial:]'
+
+# resume the application
+lldb> cont
+
+# see assembly at breakpoint
+lldb> dis
+
+# set breakpoint after the function prolog found using dis
+lldb> break set --addr 0x12345678
+
+ # continue to breakpoint we just set
+lldb> cont
+
+# read the registers
+lldb> reg read
+
+lldb> po $rdi  
+<MyObject: 0xdeadbeef>
+
+lldb> p $rdi
+(unsigned long)0xdeadbeef
+
+lldb> p (SEL)$rdi  
+(unsigned long) "abcde"
+```
+
+
 ## Binary Diffing
 
 ```
