@@ -1,13 +1,13 @@
 # Reverse Code Engineering Notes
 
-# Binary Diffing
+## Binary Diffing
 
 ```
 $ brew install radare2
 $ brew install graphviz --with-app
 ```
 
-## Offset-based diff
+### Offset-based diff
 
 ```
 $ radiff2 genuine cracked
@@ -23,7 +23,7 @@ similarity: 0.97
 distance: 743  
 ```
 
-## Graph diff
+### Graph diff
 
 ```
 $ radiff2 -g main /bin/false /bin/true > output.dot
